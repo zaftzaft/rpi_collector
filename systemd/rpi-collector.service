@@ -1,0 +1,7 @@
+[Unit]
+Description=rpi collector
+
+[Service]
+Type=oneshot
+EnvironmentFile=-/etc/conf.d/rpi-collector
+ExecStart=/usr/bin/rpi_collector -p $RPI_COLLECTOR_ARGS
